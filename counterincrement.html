@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Increment Example</title>
+    <style>
+        /* Create a counter named "mylist" */
+        ol {
+            margin-left: 50px;
+           counter-reset: mylist;   
+
+        }
+
+        /* Increment the counter for each list item */
+       li {
+            counter-increment: mylist;
+            list-style: none;
+        } 
+
+        /* Display the counter value before each list item */
+        li::before {
+            content: counter(mylist) ". "; /* Display the counter value followed by a dot */
+            font-weight: bold;
+        }
+        li::after{
+            content: " ."counter(mylist);
+        }
+    </style>
+</head>
+<body>
+
+<ol>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+    <li>Third item</li>
+    <li>Third item</li>
+</ol>
+
+
+</body>
+</html>

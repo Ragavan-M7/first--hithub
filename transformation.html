@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transformation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* .translate{
+            height: 150px;
+            width: 150px;
+            background-color: gray;
+            color: aliceblue;
+            transform: translateX(150px);
+            transform: translateY(150px);
+            transform: translate(150px,150px);
+            position: absolute;
+            left: 200px;
+            
+        }
+        .translate:hover{
+            transform: translate3d(150px,150px,150px);
+        } */
+        .rotate img{
+            height: 150px;
+            width: 150px;
+            /* transform: rotateX(50deg);
+            transform: rotateY(250deg); */
+            /* transform: rotateZ(50deg); */
+            /* transform: rotate(70deg); */
+            transform: rotate3d(1,1,1,70deg);
+            
+        }
+        .scale{
+            background-color: black;
+            color: white;
+            margin-top: 30px;
+            margin: 0% auto;
+            width: 150px;
+            height: 150px;
+            /* transform: scaleX(-2);
+            transform: scaleY(3); */
+            transform:scale(3,3);
+            transform: scale3d(1,1,1);
+            
+            
+        }
+        .skew img{
+            width: 150px;
+            height: 150px;
+            transform: skewX(40deg);
+            transform: skewY(50deg);
+            transform: skew(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="translate">
+        <h1>translate</h1>
+    </div>
+    <div class="rotate">
+        <img src="./img/shirt.webp">
+    </div>
+    <div class="scale">
+       <h1>scale</h1>
+    </div>
+    <div class="skew">
+        <img src="./img/shoes.webp">
+    </div>
+</body>
+</html>

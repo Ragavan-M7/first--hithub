@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    .skill-container {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .skill-name {
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+
+    meter {
+        width: 100%;
+        height: 20px;
+        background-color: #ddd;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .percentage {
+        font-size: 1em;
+        margin-top: 5px;
+        color: white;
+        text-align: right;
+    
+    }
+    </style>
+</head>
+<body>
+    <div class="skill-container">
+        <div class="skill-name">HTML</div>
+        <meter min="0" max="100" value="86"></meter>
+        <div class="percentage">86%</div>
+    </div>
+
+    <div class="skill-container">
+        <div class="skill-name">CSS</div>
+        <meter min="0" max="100" value="46"></meter>
+        <div class="percentage">46%</div>
+    </div>
+
+    <div class="skill-container">
+        <div class="skill-name">JAVASCRIPT</div>
+        <meter min="0" max="100" value="38"></meter>
+        <div class="percentage">38%</div>
+    </div>
+
+    <div class="skill-container">
+        <div class="skill-name">PYTHON</div>
+        <meter min="0" max="100" value="17"></meter>
+        <div class="percentage">17%</div>
+    </div>
+
+</body>
+</html>

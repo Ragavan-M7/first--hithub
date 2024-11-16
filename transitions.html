@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img{
+            width: 300px;
+            transition: transform 3s cubic-bezier(0,1.29,1,-0.33) 2s;
+
+        }
+        img:hover{
+            transform: rotateZ(80deg);
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- ............transition : property timing timing_function delay......... -->
+     <img src="./img/shoes.webp" height="250px",width="250px">
+    </body>
+</html>

@@ -1,0 +1,197 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css- selectors</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    specific class selector
+     h1.ra{
+        color: red;
+        font-size: 30px;
+    }
+    li.li{
+        color: blue;
+        font-size: 20px;
+    } 
+
+    ..................grouping selector............
+
+    h1,p,h2,ul{
+        color: aqua;
+        font-size: 20px;
+    }
+
+
+    ..............................descendant selector.................
+
+    div p{
+        color: red;
+        font-size: 25px;
+    }
+    .rag p{
+        color: blue;
+    }
+
+
+    ............................child selector (div>p).......................
+
+    div>p{
+        color: blueviolet;
+        font-size: 20px;
+    }
+     .child-selector>p{
+        color: brown;
+     }
+
+
+      ....................adjacent sibling selector (div+p)........................
+      div+p{
+        color: chartreuse;
+      }
+      .adjacent-sibling-selector+p{
+        color: red;
+      }
+      div+h1{
+        color: green;       
+      }
+      ...h1 was not selected...
+
+
+      .....................general sibling selector(div~p)................
+
+
+      div~p{
+        color: brown;
+        font-size: 25px;
+      }
+
+
+
+</style>
+
+<body>
+    ....................specific class selector  (h1.classname).................
+    <section class="specific-selector">
+    <h1 class="ra">specific selectors</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio officia quia tempore corrupti doloribus sit obcaecati! Provident, molestiae? Odio aliquam sunt sequi nemo corporis voluptatem voluptatibus aliquid minus quis?</p>
+
+    <ul>
+        <li class="li">html</li>
+        <li>css</li>
+        <li class="li">java script</li>
+    </ul>
+    <h1>specific selectors</h1>
+</section>
+
+    .................................grouping selector (h1,h2,p).......................
+    <section class="grouping-selector">
+    <h1> grouping selectors</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis quidem consectetur tenetur! Natus saepe sunt dicta adipisci eveniet molestias?</p>
+    <h2>grouped</h2>
+    <ul>
+        <li>home</li>
+        <li>about</li>
+        <li>menu</li>
+    </ul>
+ </section>
+
+
+    ..............................descendant selector    (div p).................
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, atque!</p>
+    <div class="rag">
+        <p>div para1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam odit amet tempora, qui illo ipsam?
+        </p>
+        <section class="descendant section">
+            <p> section para1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eveniet sint provident
+                iste perspiciatis dolor sit minus enim mollitia. Unde?</p>
+
+        </section>
+        <p>div para2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, et.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae non voluptatem placeat est sequi error?</p>
+
+
+
+
+    ..........................child selector (div>p).........................
+
+    <p>para1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum nulla voluptatem exercitationem eveniet vero
+        molestias aliquid laboriosam itaque consequuntur quo?</p>
+    <div class="child-selector">
+        <p>div para1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, natus!</p>
+        <p>div para2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nam alias accusamus minus in
+            voluptatem?</p>
+        <section>
+            <p>section para1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, corporis.</p>
+            <p>section para2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, corporis.</p>
+        </section>
+
+
+    </div>
+    <p>para2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores reiciendis iste ad est iusto ipsum adipisci exercitationem qui pariatur!</p>
+
+
+    ....................adjacent sibling selector (div+p) select a next elements........................
+
+    <p>para1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum nulla voluptatem exercitationem eveniet vero
+        molestias aliquid laboriosam itaque consequuntur quo?</p>
+    <div class="adjacent-sibling-selector">
+        <p>div para1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, natus!</p>
+        <p>div para2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nam alias accusamus minus in
+            voluptatem?</p>
+        <section>
+            <p>section para1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, corporis.</p>
+            <p>section para2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, corporis.</p>
+        </section>
+
+
+    </div>
+    <p>para2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores reiciendis iste ad est iusto ipsum adipisci exercitationem qui pariatur!</p>
+    <p>para3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde modi omnis nostrum reiciendis pariatur molestiae. Cupiditate quisquam consequatur tenetur minima.</p>
+    <p>para4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, maiores.</p>
+
+    <h1>heading1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, necessitatibus!</h1>
+    <h1>heading2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates laudantium dicta eligendi!</h1>
+    <h1>heading3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+
+
+
+    .....................general sibling selector(div~p) select a next all elements................ 
+
+
+    <p>para1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum nulla voluptatem exercitationem eveniet vero
+        molestias aliquid laboriosam itaque consequuntur quo?</p>
+    <div class="adjacent-sibling-selector">
+        <p>div para1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, natus!</p>
+        <p>div para2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nam alias accusamus minus in
+            voluptatem?</p>
+        <section>
+            <p>section para1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, corporis.</p>
+            <p>section para2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, corporis.</p>
+        </section>
+
+
+    </div>
+    <p>para2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores reiciendis iste ad est iusto ipsum adipisci exercitationem qui pariatur!</p>
+    <p>para3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde modi omnis nostrum reiciendis pariatur molestiae. Cupiditate quisquam consequatur tenetur minima.</p>
+    <p>para4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, maiores.</p>
+
+    <h1>heading1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, necessitatibus!</h1>
+    <h1>heading2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates laudantium dicta eligendi!</h1>
+    <h1>heading3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+
+
+
+
+</body>
+
+</html> -->

@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid-area-box</title>
+  <style>
+  .container div{
+    display: flex;
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid black;
+    font-size: 20px;
+    justify-content: center ;
+    align-content: center;
+  }  
+  .container{
+    display: grid;
+    /* grid-template-columns: 200px 1fr 200px; */
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: 
+    "h h h h h"
+    "sb1 m m m sb2"
+    "f f f f f ";
+  }
+  .header{
+    grid-area: h;
+  }
+  .sidebar1{
+    grid-area: sb1;
+  }
+  .main{
+    grid-area: m;
+  }
+  .sidebar2{
+    grid-area: sb2;
+  }
+  .footer{
+    grid-area: f;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header"><p>header  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, alias.</p></div>
+    <div class="sidebar1"><p>sidebar 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, voluptates?</p></div>
+    <div class="main"><p>main content  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, consequuntur!</p></div>
+    <div class="sidebar2"><p>sidebar 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, ipsa.</p> </div>
+    <div class="footer"><p>footer Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, eius.</p></div>
+  </div>
+</body>
+</html> -->

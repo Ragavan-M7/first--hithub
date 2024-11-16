@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Box</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        p{
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: 2px solid blueviolet;
+        }
+        .container div{
+            border: 2px solid red;
+        }
+        .container{
+            margin: auto;
+            background-color: aqua;
+            display:grid ;
+            /* grid-template-columns: repeat(4,1fr); */
+            grid-template-columns:repeat(auto-fit, 1fr);
+            grid-template-rows: repeat(4,200px);
+           grid-auto-flow: row;
+            gap: 20px;
+
+            
+          
+        }
+        .box1{
+            grid-column: 1/3;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"><p> BOX 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, necessitatibus!</p></div>
+        <div class="box2"><p> BOX 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, necessitatibus!</p></div>
+        <div class="box3"><p>BOX 3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, necessitatibus!</p></div>
+        <div class="box4"><p>BOX 4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, necessitatibus!</p></div>
+        <div class="box5"><p>BOX 5 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, necessitatibus!</p></div>
+        <div class="box6"><p>BOX 6 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, necessitatibus!</p></div>
+        <div class="box7"><p>BOX 7 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, necessitatibus!</p></div>
+        <div class="box8"><p>BOX 8 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, necessitatibus!</p></div>
+        <div class="box9"><p>BOX 9 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, necessitatibus!</p></div>
+        <div class="box10"><p>BOX 10 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, necessitatibus!</p></div>
+        
+      
+        
+    </div>
+    
+</body>
+</html>

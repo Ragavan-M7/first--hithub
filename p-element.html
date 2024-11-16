@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p-elements</title>
+    
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+      
+      
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+         .ps::first-letter{
+            color: blueviolet;
+            font-size: 60px;
+         }
+         .ps::first-line{
+            color: red;
+         }
+         ul{
+            margin-left: 30px;
+         }
+         .m-ul{
+            list-style: none;
+         }
+         .m-ul li::marker{
+            content: "rag => ";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+         }
+         .input{
+            background: red;
+            width: 300px;
+         }
+         .list-p{
+            margin-left: 50px;
+            display: list-item;
+            list-style: none;
+           counter-increment: my;
+         }
+         .list-p::marker{
+            content:counter(my) " . ";
+         }
+         .list-p::selection{
+            color: #e21616;
+            background-color: blue;
+         }
+     input::placeholder{
+        color: #e21616;
+        background-color: green;
+     }
+        
+    </style>
+</head>
+<body>
+    <h1 class="ps">pseudo elements </h1>
+    <ul class="m-ul">
+        <li>apple</li>
+        <li>orange</li>
+        <li>binable</li>
+        <li>cova</li>
+    </ul>
+    <div class="list-p ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, doloremque.</div>
+    <div class="list-p ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, doloremque.</div>
+    <div class="list-p ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, doloremque.</div>
+    <div class="list-p ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, doloremque.</div>
+    <div class="list-p ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, doloremque.</div>
+    <input type="text" placeholder="click the button">
+   
+    <a href="https://chatgpt.com/c/6700eb02-d74c-8003-b285-f4e2168a4551"><i class='bx bxl-whatsapp bx-tada' style='color:#e21616' ></i></a>
+</body>
+</html>

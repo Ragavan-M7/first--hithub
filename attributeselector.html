@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute selectors</title>
+    <style>
+        a[target]{
+            color: green;
+            font-size: 30px;
+
+        }
+        input[title]::placeholder{
+            color: blueviolet;
+            background-color: palegreen;
+        }
+        img[alt]{
+            border-radius: 50%;
+        }
+        p[class="para"]{
+            color: red;
+        }
+        input[type="text"]{
+            border-radius: 20px;
+        }
+        img[width="100px"]{
+            border-radius: 50px;
+            border: 2px solid red;
+        }
+
+        /* ........any match.......... */
+
+        .extract-match p[class~="title"] {
+            color: rgb(231, 46, 170);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+
+    /* ...............( ^ ) start the same class name select................ */
+   .s-match p[class^="title"] {
+            color: blue;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+/* .....................( * ) all match............... */
+.all-match p[class*="title"]{
+    color: green;
+    font-size: 30px;
+}
+
+/* ......................( $ ) end match................ */
+.end-match p[class$="title"]{
+    color: rgb(238, 26, 245);
+    font-size: 30px;
+}
+.hifan-match p[class|="title"]{
+    color: rgb(227, 241, 23);
+    font-size: 30px;
+}
+    </style>
+</head>
+<body>
+    ...................attribute name selectors...............<br>
+
+    <a target="_blank">ragava</a><br>
+    <input type="mail" title="give asess" placeholder="set a input in form"><br>
+    <input type="mail" placeholder="set a input in form">
+    <input type="number" title="give asess" placeholder="set a input in form">
+    <img src="./img/full1-shirt.webp" style="width: 150px; height: 150px;" >
+    <img src="./img/full1-shirt.webp" style="width: 150px; height: 150px;" alt="image1">
+    <img src="./img/full1-shirt.webp" style="width: 150px; height: 150px;" ><br>
+
+
+    ............target...........<br>
+   
+
+    <!-- Opens link in a new tab -->
+    <a href="https://example.com" target="_blank">Open in New Tab</a><br>
+
+    <!-- Opens link in the same tab -->
+    <a href="https://example.com" target="_self">Open in Same Tab</a><br>
+
+    <!-- Opens link in the parent frame -->
+    <a href="https://example.com" target="_parent">Open in Parent Frame</a><br>
+
+    <!-- Opens link in the full window, removing frames -->
+    <a href="https://example.com" target="_top">Open in Full Window</a><br>
+
+    
+
+    .......................attribute name with value selector..................
+
+    <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, facilis?</p>
+    <p class="head">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, facilis?</p>
+    <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, facilis?</p>
+    <p class="head">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, facilis?</p>
+    <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, facilis?</p>
+
+    <input type="text" placeholder="enter a value">
+    <input type="email" placeholder="enter a value">
+    <input type="text" placeholder="enter a value">
+
+<img src="./img/shoes.webp" width="100px" height="100px">
+<img src="./img/shoes.webp" width="120px" height="100px">
+<img src="./img/shoes.webp" width="120px" height="100px">
+
+.....................(~)extract match....................
+
+<div class="extract-match">
+<p class="main title">This paragraph has the class "title" and will be styled.</p>
+    <p class="title-main">This paragraph has only the class "title" and will also be styled.</p>
+    <p class="subtitle">This paragraph does not contain the word "title" in the class, so it won't be styled.</p>
+    <p class="title-sub">This paragraph does not contain the word "title" in the class, so it won't be styled.</p>
+    <p class="sub-title-head">This paragraph does not contain the word "title" in the class, so it won't be styled.</p>
+    </div>
+
+
+
+..................( ^ ) start the same class name select............
+<div class="s-match">
+    <p class="main title">This paragraph has the class "title" and will be styled.</p>
+    <p class="title-main">This paragraph has only the class "title" and will also be styled.</p>
+    <p class="subtitle">This paragraph does not contain the word "title" in the class, so it won't be styled.</p>
+
+</div>
+
+...................( * ) select the all class name..............
+
+<div class="all-match">
+    <p class="main title">This paragraph has the class "title" and will be styled.</p>
+    <p class="title-main">This paragraph has only the class "title" and will also be styled.</p>
+    <p class="subtitle">This paragraph does not contain the word "title" in the class, so it won't be styled.</p>
+
+</div>
+................... ( $ ) only ending element class name............
+<div class="end-match">
+    <p class="main title">This paragraph has the class "title" and will be styled.</p>
+    <p class="title-main">This paragraph has only the class "title" and will also be styled.</p>
+    <p class="subtitle">This paragraph does not contain the word "title" in the class, so it won't be styled.</p>
+    <p class="second-title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, ipsum.</p>
+</div>
+
+.................( | )select a class name in - hifan......................
+<div class="hifan-match">
+    <p class="main title">This paragraph has the class "title" and will be styled.</p>
+    <p class="title-main">This paragraph has only the class "title" and will also be styled.</p>
+    <p class="subtitle">This paragraph does not contain the word "title" in the class, so it won't be styled.</p>
+    <p class="second-title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, ipsum.</p>
+</div>
+
+</body>
+</html>

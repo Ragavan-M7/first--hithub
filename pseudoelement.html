@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo class & elements</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        p{
+            font-size: 20px;
+        }
+        p::first-letter{
+            color: red;
+            font-size: 30px;
+        }
+        p::first-line{
+            color: green;
+            font-size: 30px;
+        }
+        p::before{
+            content:"Note=>";
+        }
+        p::after{
+            content: "(...Notes...)";
+            color: blueviolet;
+        }
+        .li::before{
+            content: "note";
+            color: red;
+            font-size: 20px;
+        }
+        p::selection{
+            background-color: black;
+            color: white;
+        }
+        ul{
+            margin-left: 100px;
+        }
+        ol{
+            margin-left: 100px;
+        }
+        li::marker{
+            color: blue;
+            font-size: 20px;
+
+        }
+        div h1::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  background-color: gold;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  transition: width 0.4s ease-in-out;
+}
+div h1:hover::after{
+    width: 110px;
+}
+div h1{
+    position: relative;
+}
+.head{
+    color: rgb(240, 6, 6);
+    font-size: 60px;
+    text-align: center;
+    position: relative;
+    
+}
+.head::before,
+.head::after{
+    content: "";
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    top: 0;
+    border-top: solid 30px transparent;
+    border-bottom:solid 30px transparent ;
+}
+.head::before{
+    left: 110px;
+    border-right: solid 70px blueviolet;
+}
+.head::after{
+    right: 130px;
+    border-left: solid 70px blueviolet;
+}
+
+        
+    </style>
+</head>
+<body>
+    <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, aperiam.</p>
+    <span class="li">hello</span>
+    <ol>
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+        <li>binable</li>
+        <li>cova</li>
+    </ol>
+    <h1>ragavan</h1>
+</div>
+    <h1 class="head">before & after pseudo-elements</h1>
+</body>
+</html>

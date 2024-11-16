@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            overflow: visible;
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            /* overflow-y: scroll; */
+            overflow: auto;
+            
+        }
+        p{
+            color:black;
+        }
+        .container2{
+            width: 200px;
+            background-color: aqua;
+            margin-top: 20px;
+            display: flex;
+            overflow-x: scroll;
+        }
+        .col{
+            width:80px ;
+            color: black;
+        }
+
+        .container3 {
+            background-color: rgb(245, 108, 108);
+            color: rgb(5, 5, 5);
+  width: 200px;
+  white-space: nowrap;      /* Prevents text from wrapping */
+   overflow: hidden;         /* Hides overflowing text */
+  text-overflow: ellipsis;   /* Adds "..." for overflowed text */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet qui nihil, suscipit similique quae quaerat accusamus velit dolor repudiandae perspiciatis impedit a quo, iusto debitis. Possimus consequatur iusto non quidem . Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam enim ea at adipisci quos dolorem dolor libero labore perspiciatis eos! Nihil assumenda, ducimus excepturi commodi sequi non placeat? Nulla explicabo dolorem aliquid in deserunt amet minima quaerat, voluptas fugit non quo, pariatur necessitatibus sit labore, itaque consequatur fuga ea sint aliquam? Debitis accusantium tenetur rem nemo sed? Explicabo officia non obcaecati veritatis mollitia minima nihil officiis porro! Dolore nobis culpa ipsam voluptate soluta esse! Illum et quae alias enim harum in ea soluta aspernatur, explicabo mollitia esse earum atque voluptatibus doloribus dolorum! Id maiores vitae suscipit ex earum esse quasi! </p>
+    </div>
+    <div class="container2">
+        <div class="col"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, itaque? Pariatur obcaecati hic quae odio!</p></div>
+        <div class="col"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, itaque? Pariatur obcaecati hic quae odio!</p></div>
+        <div class="col"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, itaque? Pariatur obcaecati hic quae odio!</p></div>
+        <div class="col"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, itaque? Pariatur obcaecati hic quae odio!</p></div>
+        <div class="col"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, itaque? Pariatur obcaecati hic quae odio!</p></div>
+    </div>
+
+    <div class="container3">
+        This is some very long text that will not wrap, and the extra text will be replaced by an ellipsis...
+      </div>
+      
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul, li, a {
+            list-style: none;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            align-items: center;
+            border: 1px solid black;
+        }
+        .nav-ul > li {
+            border: 1px solid red;
+            display: inline-block;
+            width: 150px;
+            /* padding: 20px; */
+            font-size: 22px;
+            text-align: center;
+            position: relative; /* Position relative for dropdown */
+        }
+        .nav-ul li a {
+            color: black;
+        }
+        .logo img {
+            border-radius: 30px;
+            padding-left: 20px;
+        }
+        .nav-ul {
+            padding-right: 40px;
+        }
+        /* Dropdown styling */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: white;
+            border: 1px solid black;
+            padding: 10px;
+            z-index: 1;
+        }
+        .dropdown-ul {
+            list-style-type: none;
+        }
+        .dropdown-ul li {
+            padding: 10px;
+            white-space: nowrap;
+        }
+        .dropdown-ul li a {
+            color: black;
+            font-size: 18px;
+        }
+        .nav-ul .click:hover .dropdown {
+            display: block;
+        }
+        /* .dropdown-ul li a:hover {
+            color: #007BFF;
+        } */
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <div class="logo">
+                <img src="./img/jeans.webp" style="width: 100px; height: 100px;">
+            </div>
+            <ul class="nav-ul">
+                <li class="click"><a href="" >Home</a>
+                    <div class="dropdown">
+                        <ul class="dropdown-ul">
+                            <li><a href="">go about</a></li>
+                            <li><a href="">Marketing</a></li>
+                            <li><a href="">Deployment</a></li>
+                            <li><a href="">Job</a></li>
+                        </ul>
+                    </div></li>
+                <li><a href="">About</a></li>
+                <li><a href="" >Services</a>
+                    <div class="dropdown">
+                        <ul class="dropdown-ul">
+                            <li><a href="">Sales</a></li>
+                            <li><a href="">Marketing</a></li>
+                            <li><a href="">Deployment</a></li>
+                            <li><a href="">Job</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
